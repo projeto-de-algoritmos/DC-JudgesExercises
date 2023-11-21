@@ -3,16 +3,16 @@ class Solution:
         if not buildings:
             return []
         
-        critical_points = []  
+        critical_points = []
         
         boundaries = []
         for left, right, height in buildings:
             boundaries.append((left, -height, right))
-            boundaries.append((right, 0, 0))  
+            boundaries.append((right, 0, 0))
         
-        boundaries.sort()  
+        boundaries.sort()
         
-        max_heap = [(0, float('inf'))]  
+        max_heap = [(0, float('inf'))]
         
         for x, neg_height, right in boundaries:
             if neg_height == 0:
